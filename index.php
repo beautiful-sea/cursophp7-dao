@@ -9,8 +9,8 @@ require_once("config.php");
 
 //CARREGA UMA LISTA DE USUARIOS
 
-//$lista = Usuario::getList();
-//echo json_encode($lista);
+$lista = Usuario::getList();
+echo json_encode($lista);
 
 //CARREGA UMA LISTA DE USUARIOS BUSCANDO PELO LOGIN
 //$search = Usuario::search("li");
@@ -27,12 +27,20 @@ $aluno = new Usuario("aluno", "@lun0");
 $aluno->insert();
 echo $aluno;*/
 
+//ALTERAR UM USUARIO
+/*
 $usuario = new Usuario();
-
 $usuario->LoadById(4);
-
 $usuario->update("professor", "!@#$%¨&*");
+echo $usuario;*/
 
-echo $usuario;
+//DELETAR USUARIO
+/*$usuario = new Usuario();
+
+$usuario->loadById(3);
+
+$usuario->delete();
+
+echo $usuario;*/
 
 ?>
